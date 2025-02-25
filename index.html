@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulam Waris-Portofolio</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header id="navbar">
+        <div id="navbar-left">WARIS</div>
+        <div id="navbar-right">
+            <div class="navbar-headings"><span>Home.</span></div>
+            <div class="navbar-headings"><span>About.</span></div>
+            <div class="navbar-headings"><span>Projects.</span></div>
+            <div class="navbar-headings"><span>Contact.</span></div>
+            <div><i class="fa-solid fa-bars" onclick="showNavbarHeadings()"></i></div>
+        </div>
+    </header>
+
+    <script>
+        function showNavbarHeadings(){
+            
+            const elements = document.querySelectorAll('.navbar-headings');
+
+            if (elements.length > 0){
+            elements.forEach(element => {
+                if(element.style.display == 'none'){
+                    element.style.display = 'inline';
+                    element.style.left = "0";
+                }
+                else{
+                    element.style.display = 'none';
+                    element.style.left = "100%";
+                }
+            });
+            } else {
+            console.error("No elements with class 'my-element' found")
+            }
+            
+            
+        }
+    </script>
+    
+</body>
+</html>
