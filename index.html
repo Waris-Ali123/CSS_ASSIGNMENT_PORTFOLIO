@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gulam Waris-Portofolio</title>
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -22,6 +23,20 @@
         </div>
     </header>
 
+    <section id="section-1">
+        <div id="hey-there-block">
+             
+            <div id="hay-there">HAY! THERE</div>
+            <div id="intro">I AM GULAM WARIS</div>
+            <div id="professional">
+                A PROFESSIONAL <span id="prof-fill">DEVELOPER</span>
+            </div>
+
+            <button id="hire-btn">HIRE ME..</button>
+
+        </div>
+    </section>
+
     <script>
         function showNavbarHeadings() {
             const icon = document.querySelector('#navbar-right i');
@@ -33,26 +48,14 @@
                 icon.classList.add('fa-xmark');
                 nav_heading_block.classList.add('is-opened');
                 
-                // elements.forEach(element => {
-                //     element.style.display = 'inline-block';
-                //     // element.classList.add("is-opened");
-                //     setTimeout(() => {
-                //         element.style.left = "0";
-                //     }, 10);
-                // }); 
+              
 
 
             } else { // Simplified else statement
                 icon.classList.remove('fa-xmark');
                 icon.classList.add('fa-bars');
                 nav_heading_block.classList.remove("is-opened");
-                // elements.forEach(element => {
-                //     element.style.left = "100%";
-                //     // element.classList.remove("is-opened");
-                //     setTimeout(() => {
-                //         element.style.display = 'none';
-                //     }, 1000);
-                // });
+               
             }
             console.log('bars are using', icon.className);
             console.log('bars are using', nav_heading_block);
