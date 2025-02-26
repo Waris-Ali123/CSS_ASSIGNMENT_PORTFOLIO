@@ -11,35 +11,51 @@
     <header id="navbar">
         <div id="navbar-left">WARIS</div>
         <div id="navbar-right">
-            <div class="navbar-headings"><span>Home.</span></div>
-            <div class="navbar-headings"><span>About.</span></div>
-            <div class="navbar-headings"><span>Projects.</span></div>
-            <div class="navbar-headings"><span>Contact.</span></div>
+            <div class="nav-heading-block">
+
+                <div class="navbar-headings"><span>Home.</span></div>
+                <div class="navbar-headings"><span>About.</span></div>
+                <div class="navbar-headings"><span>Projects.</span></div>
+                <div class="navbar-headings"><span>Contact.</span></div>
+            </div>
             <div><i class="fa-solid fa-bars" onclick="showNavbarHeadings()"></i></div>
         </div>
     </header>
 
     <script>
-        function showNavbarHeadings(){
-            
+        function showNavbarHeadings() {
+            const icon = document.querySelector('#navbar-right i');
             const elements = document.querySelectorAll('.navbar-headings');
+            const nav_heading_block = document.querySelector(".nav-heading-block");
 
-            if (elements.length > 0){
-            elements.forEach(element => {
-                if(element.style.display == 'none'){
-                    element.style.display = 'inline';
-                    element.style.left = "0";
-                }
-                else{
-                    element.style.display = 'none';
-                    element.style.left = "100%";
-                }
-            });
-            } else {
-            console.error("No elements with class 'my-element' found")
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+                nav_heading_block.classList.add('is-opened');
+                
+                // elements.forEach(element => {
+                //     element.style.display = 'inline-block';
+                //     // element.classList.add("is-opened");
+                //     setTimeout(() => {
+                //         element.style.left = "0";
+                //     }, 10);
+                // }); 
+
+
+            } else { // Simplified else statement
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+                nav_heading_block.classList.remove("is-opened");
+                // elements.forEach(element => {
+                //     element.style.left = "100%";
+                //     // element.classList.remove("is-opened");
+                //     setTimeout(() => {
+                //         element.style.display = 'none';
+                //     }, 1000);
+                // });
             }
-            
-            
+            console.log('bars are using', icon.className);
+            console.log('bars are using', nav_heading_block);
         }
     </script>
     
