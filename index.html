@@ -6,6 +6,7 @@
     <title>Gulam Waris-Portofolio</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="index.css">
+    <script src="navbar.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -38,28 +39,7 @@
     </section>
 
     <script>
-        function showNavbarHeadings() {
-            const icon = document.querySelector('#navbar-right i');
-            const elements = document.querySelectorAll('.navbar-headings');
-            const nav_heading_block = document.querySelector(".nav-heading-block");
-
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-                nav_heading_block.classList.add('is-opened');
-                
-              
-
-
-            } else { // Simplified else statement
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-                nav_heading_block.classList.remove("is-opened");
-               
-            }
-            console.log('bars are using', icon.className);
-            console.log('bars are using', nav_heading_block);
-        }
+        
     </script>
     
 </body>
