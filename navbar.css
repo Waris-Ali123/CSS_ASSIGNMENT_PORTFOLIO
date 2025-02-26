@@ -4,7 +4,7 @@
 }
 
 #navbar{
-    color: black;
+    color: white;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -12,9 +12,9 @@
     max-width: 1015px;
     margin: auto;
     height: 55px;
-    background-color: bisque;
+    /* background-color: bisque; */
     font-weight: 600;
-    z-index: 99;
+    z-index: +99;
 }
 #navbar-left{
     font-family: cursive;
