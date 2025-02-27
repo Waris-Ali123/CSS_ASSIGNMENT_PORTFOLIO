@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,79 +8,98 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="index.css">
     <script src="navbar.js"></script>
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <header id="navbar">
-        <div id="navbar-left">WARIS</div>
-        <div id="navbar-right">
-            <div class="nav-heading-block">
 
-                <div class="navbar-headings"><span>Home.</span></div>
-                <div class="navbar-headings"><span>About.</span></div>
-                <div class="navbar-headings"><span>Projects.</span></div>
-                <div class="navbar-headings"><span>Contact.</span></div>
-            </div>
-            <div><i class="fa-solid fa-bars" onclick="showNavbarHeadings()"></i></div>
-        </div>
-    </header>
+<body>
+
 
     <section id="section-1">
         <div id="hey-there-block">
-             
+
             <div id="hay-there">HAY! THERE</div>
             <div id="intro">I AM GULAM WARIS</div>
             <div id="professional">
-                A PROFESSIONAL <span id="prof-fill">DEVELOPER</span> <span id="cursorBlinking">|</span>
+                A PROFESSIONAL <span id="prof-fill"></span> <span id="cursorBlinking">|</span>
             </div>
 
             <button id="hire-btn">HIRE ME..</button>
 
         </div>
+
+        <div id="social-media-block">
+            <div class="social-icons"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="social-icons"><i class="fa-brands fa-github"></i></div>
+            <div class="social-icons"><i class="fa-solid fa-code"></i></div>
+            <div class="social-icons"><i class="fa-brands fa-instagram"></i></div>
+            <div class="social-icons"><i class="fa-brands fa-youtube"></i></div>
+        </div>
     </section>
 
-    
+    <header id="navbar-box">
+        <div id="navbar">
+
+            <div id="navbar-left">WARIS</div>
+            <div id="navbar-right">
+                <div class="nav-heading-block">
+
+                    <div class="navbar-headings"><span>Home.</span></div>
+                    <div class="navbar-headings"><span>About.</span></div>
+                    <div class="navbar-headings"><span>Projects.</span></div>
+                    <div class="navbar-headings"><span>Contact.</span></div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-bars" onclick="showNavbarHeadings()"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="about-section">
+        <div id="about-section-top">
+            <h2 id="about-section-top-heading">SOME WORDS ABOUT ME</h2>
+            <div id="about-section-top-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et orci neque. Praesent id placerat
+                massa. Maecenas sit amet tempor mauris.
+                Praesent at nisl in urna finibus faucibus. Aenean gravida
+                semper felis eu pretium.
+            </div>
+        </div>
+        <div id="about-section-bottom">
+            <div id="image-container">
+                <img src="https://img.freepik.com/free-photo/smiling-young-male-professional-standing-with-arms-crossed-while-making-eye-contact-against-isolated-background_662251-838.jpg" alt="">
+            </div>
+            <div id="desc-container">
+                <div id="about-description">Duis a mauris vel risus sodales tristique in vitae nisi. Aenean pharetra
+                    fermentum lectus vel aliquam. Vestibulum sollicitudin urna a facilisis auctor.
+                    Sed lobortis velit vitae fermentum mollis. Integer vulputate finibus placerat. Maecenas ut iaculis
+                    lorem, sit amet aliquet sapien. Nam fringilla vel diam vitae blandit.Vestibulum sollicitudin urna a facilisis auctor.
+                    Sed lobortis velit vitae fermentum mollis. Integer vulputate finibus placerat. Maecenas ut iaculis
+                    lorem, sit amet aliquet sapien. Nam fringilla vel diam vitae blandit.
+                    <br><br>
+                    Fusce non mauris magna. Suspendisse rhoncus eu erat quis placerat. Aliquam at efficitur mi. Curabitur
+                    ultrices enim auctor, vehicula nisi eget, ultricies neque.
+                </div>
+                <button id="download-cv-btn">
+                    DOWNLOAD CV
+                </button>
+
+            </div>
+        </div>
+    </section>
+
 
     <script>
-        function dynamicallyChanginProfFill(){
-            const profFill = document.getElementById("prof-fill");
-            const words = ['trainer','scholar','designer','database engineer','developer'];
-            const cursorBlinking = document.getElementById('cursorBlinking');
 
 
-            let currentWord = words[index % words.length];
-            profFill.style.width = "0";
-            
-            setTimeout(()=>{
-                profFill.innerText = currentWord;
-                profFill.style.width = currentWord.length + 1 + 'ch';
-
-            },1500);
-
-
-            index++;
-            console.log(profFill.innerText);
-        }
-        
-        var index=0;
-        setInterval(dynamicallyChanginProfFill,3000);
-
-
-
-
-
-
-
-
-        
-        setInterval(()=>{
-            cursorBlinking.style.opacity = cursorBlinking.style.opacity==="0" ? "1" : "0"
-        } , 500);
-        console.log(cursorBlinking.innerText);
 
 
     </script>
-    
+
+    <script src="index.js"></script>
 </body>
+
 </html>

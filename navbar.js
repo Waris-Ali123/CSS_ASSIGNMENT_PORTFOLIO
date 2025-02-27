@@ -1,3 +1,16 @@
+window.addEventListener("scroll", function() {
+    const navbar = document.getElementById("navbar-box");
+
+    if (window.scrollY > 100) {  // Change '100' to your desired scroll position
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+
+
+
+
 function showNavbarHeadings() {
     const icon = document.querySelector('#navbar-right i');
     const elements = document.querySelectorAll('.navbar-headings');
@@ -20,3 +33,5 @@ function showNavbarHeadings() {
     console.log('bars are using', icon.className);
     console.log('bars are using', nav_heading_block);
 }
+
+

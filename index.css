@@ -1,5 +1,7 @@
 *{
     box-sizing: content-box;
+    margin: 0;
+    padding: 0;
 }
 
 #section-1{
@@ -9,13 +11,11 @@
     height: 100vh;
     width:100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 15px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
+    position: relative;  
+    /* z-index: 1; */
 
 } 
 
@@ -54,7 +54,7 @@
     overflow: hidden;
     white-space: nowrap;
     border-right: 2px solid transparent;
-    transition: width 1s ease-in-out;
+    transition: width 2s ease-in-out;
     /* transition: all 2s; */
 }
 
@@ -76,11 +76,120 @@
     cursor: pointer;
     margin-top: 10px;
     border-radius: 5px;
+    transition: transform .3s ease-in;
 }
 
 #hire-btn:hover{
     background-color:rgb(0, 0, 53);
     color: aliceblue;
+    transform: translateY(-5px);
+    /* border: 1px solid; */
+    box-shadow: 2px 3px 3px white;
+    
     /* text-decoration: 600; */
     
 }
+
+
+
+/* social media icons */
+#social-media-block{
+    position: absolute;
+    margin: 0 auto;
+    bottom: 35px;
+    display: flex;
+    column-gap: 25px;
+    
+
+}
+
+.social-icons{
+    font-size: 1.5rem;
+    color: aliceblue;
+    transition: transform .2s ease-in;
+}
+
+.social-icons:hover{
+    transform: scale(1.3);
+    filter: drop-shadow(0px 5px 3px black);
+}
+
+
+
+/* ------------------------------------------------------section-2 starts---------------------------------------------------------- */
+
+#about-section{
+    position: relative;
+    height: 95vh;
+    max-width: 1015px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px 0;
+    margin: 30px auto;
+}
+
+#about-section-top{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 0 auto;
+    max-width: 700px;
+
+}
+
+#about-section-top-content{
+    text-align: center;
+}
+
+#about-section-bottom{
+ 
+    display: flex;
+    column-gap: 25px;
+    /* flex-wrap: wrap; */
+
+}
+
+
+#image-container{
+    width: 50%;
+}
+
+#image-container img{
+    border-radius: 20px;
+    width:100%;
+}
+
+
+#desc-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    justify-content: space-evenly;
+}
+
+#about-description{
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-right: 5px;
+    text-align: justify;
+}
+
+#download-cv-btn{
+    max-width: 200px;
+    padding: 6px;
+    font-weight: 600;
+    background-color: white;
+    color: rgb(21, 21, 81);
+    border-radius: 8px;
+    border: 2px solid  rgb(21, 21, 81);
+    cursor: pointer;
+}
+
+#download-cv-btn:hover{
+    box-shadow: 0 2px black;
+}
+
