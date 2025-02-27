@@ -41,6 +41,28 @@
 
 #professional{
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 5px;
+}
+
+
+#prof-fill{
+    margin-left: 2px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid transparent;
+    transition: width 1s ease-in-out;
+    /* transition: all 2s; */
+}
+
+
+#cursorBlinking{
+    font-weight: bolder;
+    /* margin-left: 2px; */
+    /* animation: blink 1s infinite; */
 }
 
 #hire-btn{

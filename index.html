@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="index.css">
     <script src="navbar.js"></script>
+    <script src="index.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -30,7 +31,7 @@
             <div id="hay-there">HAY! THERE</div>
             <div id="intro">I AM GULAM WARIS</div>
             <div id="professional">
-                A PROFESSIONAL <span id="prof-fill">DEVELOPER</span>
+                A PROFESSIONAL <span id="prof-fill">DEVELOPER</span> <span id="cursorBlinking">|</span>
             </div>
 
             <button id="hire-btn">HIRE ME..</button>
@@ -38,8 +39,46 @@
         </div>
     </section>
 
+    
+
     <script>
+        function dynamicallyChanginProfFill(){
+            const profFill = document.getElementById("prof-fill");
+            const words = ['trainer','scholar','designer','database engineer','developer'];
+            const cursorBlinking = document.getElementById('cursorBlinking');
+
+
+            let currentWord = words[index % words.length];
+            profFill.style.width = "0";
+            
+            setTimeout(()=>{
+                profFill.innerText = currentWord;
+                profFill.style.width = currentWord.length + 1 + 'ch';
+
+            },1500);
+
+
+            index++;
+            console.log(profFill.innerText);
+        }
         
+        var index=0;
+        setInterval(dynamicallyChanginProfFill,3000);
+
+
+
+
+
+
+
+
+        
+        setInterval(()=>{
+            cursorBlinking.style.opacity = cursorBlinking.style.opacity==="0" ? "1" : "0"
+        } , 500);
+        console.log(cursorBlinking.innerText);
+
+
     </script>
     
 </body>
