@@ -5,7 +5,7 @@
 }
 
 #section-1{
-    background-image: url("/CSS_ASSIGNMENT_PORTFOLIO/images/bgimage3.jpg");
+    background-image: url("images/bgimage3.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     height: 100vh;
